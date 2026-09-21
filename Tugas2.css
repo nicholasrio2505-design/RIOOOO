@@ -1,0 +1,286 @@
+/* ============================================
+   STYLE.CSS - EDISI SENOROK MUNGKIN 🌈✨🔥
+   Website Profil Nicholas Satria Prabowo
+   ============================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    background: repeating-linear-gradient(
+        45deg,
+        #ff0080,
+        #ff0080 20px,
+        #ff8c00 20px,
+        #ff8c00 40px,
+        #ffe600 40px,
+        #ffe600 60px,
+        #00ff7f 60px,
+        #00ff7f 80px,
+        #00c8ff 80px,
+        #00c8ff 100px,
+        #a600ff 100px,
+        #a600ff 120px
+    );
+    background-size: 300% 300%;
+    animation: pelangiGila 8s linear infinite;
+    color: #ffffff;
+}
+
+@keyframes pelangiGila {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===== HEADER ATAS (headder h1/h2) ===== */
+headder {
+    display: block;
+    text-align: center;
+    background: linear-gradient(90deg, #ff00cc, #3333ff, #ff00cc);
+    background-size: 200% auto;
+    animation: geser 3s linear infinite;
+    padding: 25px;
+    border-bottom: 10px dashed #ffe600;
+}
+
+headder h1 {
+    font-size: 3rem;
+    color: #ffe600;
+    text-shadow:
+        3px 3px 0 #ff0080,
+        -3px -3px 0 #00ffff,
+        0 0 15px #fff;
+    letter-spacing: 3px;
+    animation: goyang 1.5s ease-in-out infinite;
+}
+
+headder h2 {
+    font-size: 1.8rem;
+    color: #00ffea;
+    text-shadow: 2px 2px 0 #000;
+    font-style: italic;
+}
+
+headder hr {
+    border: none;
+    height: 6px;
+    width: 60%;
+    margin: 15px auto;
+    background: repeating-linear-gradient(90deg, #ff0080, #ffe600 10px, #00ff7f 20px);
+    border-radius: 10px;
+}
+
+@keyframes geser {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+@keyframes goyang {
+    0%, 100% { transform: rotate(-2deg) scale(1); }
+    50% { transform: rotate(2deg) scale(1.05); }
+}
+
+/* ===== HEADER KEDUA (Website Pribadi) ===== */
+header {
+    display: block;
+    text-align: center;
+    background: radial-gradient(circle, #fffb00 0%, #ff8c00 60%, #ff0080 100%);
+    padding: 30px 10px;
+    border-bottom: 8px solid #000;
+    box-shadow: 0 0 30px 10px #ff00ff inset;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #000080;
+    text-shadow: 2px 2px 0 #fff, 4px 4px 0 #ff0080;
+    animation: goyang 2s ease-in-out infinite;
+}
+
+header p {
+    font-size: 1.3rem;
+    color: #6a00ff;
+    font-weight: bold;
+    background: #fff;
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 50px;
+    border: 3px dotted #ff0080;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: #fffbe6;
+    color: #1a1a1a;
+    padding: 30px;
+    border: 8px ridge #ff8c00;
+    border-radius: 25px;
+    box-shadow: 0 0 40px 15px rgba(255, 0, 128, 0.7);
+}
+
+/* ===== SECTION UMUM ===== */
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #d9f7ff, #ffe6f7);
+    border: 4px dashed #a600ff;
+    position: relative;
+}
+
+section h2 {
+    display: inline-block;
+    background: #ff0080;
+    color: #ffe600;
+    padding: 8px 20px;
+    border-radius: 10px;
+    transform: rotate(-3deg);
+    box-shadow: 4px 4px 0 #000;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+/* ===== TENTANG SAYA ===== */
+#tentang p.kiri {
+    text-align: left;
+    background: #fff;
+    padding: 15px;
+    border-left: 8px solid #00c8ff;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.2);
+}
+
+#tentang b {
+    color: #ff0080;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 0 #ffe600;
+}
+
+/* ===== HOBI ===== */
+#hobi ul {
+    list-style: none;
+    padding: 0;
+}
+
+#hobi ul li {
+    background: linear-gradient(90deg, #00ff7f, #00c8ff);
+    color: #000;
+    font-weight: bold;
+    margin: 8px 0;
+    padding: 10px 15px;
+    border-radius: 30px;
+    border: 3px solid #000;
+    transition: transform 0.2s;
+}
+
+#hobi ul li::before {
+    content: "🌟 ";
+}
+
+#hobi ul li:hover {
+    transform: scale(1.08) rotate(-1deg);
+    background: linear-gradient(90deg, #ff0080, #ffe600);
+    cursor: pointer;
+}
+
+/* ===== KEGIATAN SEHARI-HARI ===== */
+ol {
+    background: #fff0f9;
+    padding: 20px 40px;
+    border-radius: 10px;
+    border: 3px solid #ff8c00;
+}
+
+ol li {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #6a00ff;
+}
+
+ol li::marker {
+    color: #ff0080;
+    font-size: 1.3em;
+}
+
+/* ===== FOTO ===== */
+img {
+    display: block;
+    margin: 20px auto;
+    border: 10px solid;
+    border-image: repeating-linear-gradient(45deg, #ff0080, #ffe600 10px, #00ff7f 20px, #00c8ff 30px) 20;
+    border-radius: 15px;
+    box-shadow: 0 0 25px 10px rgba(255, 215, 0, 0.8);
+    animation: goyang 3s ease-in-out infinite;
+}
+
+/* ===== TABEL PENDIDIKAN ===== */
+#pendidikan table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+#pendidikan th {
+    background: #ff0080;
+    color: #ffe600;
+    padding: 12px;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 0 #000;
+}
+
+#pendidikan td {
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #a600ff;
+}
+
+#pendidikan tr:nth-child(even) {
+    background: #d9f7ff;
+}
+
+#pendidikan tr:nth-child(odd) {
+    background: #ffe6f7;
+}
+
+#pendidikan tr:hover {
+    background: #ffe600 !important;
+    color: #000;
+    font-weight: bold;
+}
+
+/* ===== CERITA SINGKAT ===== */
+section p i {
+    color: #ff8c00;
+    font-weight: bold;
+}
+
+section p b {
+    color: #00c8ff;
+    text-shadow: 1px 1px 0 #000;
+}
+
+/* ===== SCROLLBAR NOROK BONUS ===== */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#ff0080, #ffe600, #00ff7f, #00c8ff, #a600ff);
+    border-radius: 10px;
+}

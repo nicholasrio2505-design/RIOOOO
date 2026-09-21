@@ -1,0 +1,91 @@
+
+/* =====================================================
+   NICHOLAS SATRIA PRABOWO
+   CSS ALAY SUPER HEBOH 🌈🔥
+   RAINBOW CYBERPUNK EDITION
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@400;600;800&display=swap');
+
+
+/* ===============================
+   RESET
+   =============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ===============================
+   BODY
+   =============================== */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(circle at 10% 20%, #ff00cc55, transparent 25%),
+        radial-gradient(circle at 90% 20%, #00ffff55, transparent 25%),
+        radial-gradient(circle at 50% 80%, #6600ff55, transparent 30%),
+        linear-gradient(
+            135deg,
+            #05000d,
+            #100020,
+            #00152b,
+            #001c16
+        );
+
+    background-size: 200% 200%;
+    animation: backgroundMove 10s ease infinite;
+}
+
+
+/* Background bergerak */
+
+@keyframes backgroundMove {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* ===============================
+   GRID FUTURISTIK
+   =============================== */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 0, 255, 0.08) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0, 255, 255, 0.08) 1px,
+        )
+}
+
+
+
