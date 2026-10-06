@@ -1,0 +1,487 @@
+
+/* ==================================================
+   NICHOLAS SATRIA PRABOWO
+   HACKER DARK ELEGANT EDITION
+   CYBER SECURITY STYLE
+   ================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =========================
+   GLOBAL RESET
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* =========================
+   BODY
+   ========================= */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #070D0A;
+    color: #D1FAE5;
+    line-height: 1.8;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    background-image:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(34, 197, 94, 0.08),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(16, 185, 129, 0.06),
+            transparent 35%
+        );
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+.hero {
+    background: linear-gradient(
+        135deg,
+        #020604,
+        #10251A,
+        #07120C
+    );
+
+    text-align: center;
+    padding: 85px 20px 65px;
+
+    border-bottom: 2px solid #22C55E;
+
+    box-shadow:
+        0 10px 40px rgba(34, 197, 94, 0.12);
+}
+
+/* JUDUL UTAMA */
+
+.hero h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 45px;
+    font-weight: 900;
+    color: #4ADE80;
+    letter-spacing: 3px;
+
+    text-shadow:
+        0 0 10px rgba(74, 222, 128, 0.65),
+        0 0 30px rgba(34, 197, 94, 0.25);
+
+    margin-bottom: 15px;
+}
+
+/* NAMA */
+
+.hero h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #F0FDF4;
+    font-size: 23px;
+    letter-spacing: 2px;
+}
+
+/* =========================
+   WELCOME SECTION
+   ========================= */
+
+.welcome {
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #0B1710,
+        #12251A,
+        #0A130D
+    );
+
+    padding: 65px 20px;
+
+    border-bottom: 1px solid #22543D;
+}
+
+.welcome h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px;
+    color: #4ADE80;
+
+    text-shadow:
+        0 0 12px rgba(74, 222, 128, 0.4);
+
+    margin-bottom: 15px;
+}
+
+.welcome p {
+    color: #C4D8CB;
+    font-size: 16px;
+}
+
+/* TERMINAL TEXT */
+
+.terminal {
+    color: #4ADE80 !important;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 13px !important;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+
+/* =========================
+   HORIZONTAL LINE
+   ========================= */
+
+hr {
+    width: 70%;
+    height: 2px;
+    border: none;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #22C55E,
+        transparent
+    );
+
+    margin: 30px auto;
+}
+
+/* =========================
+   MAIN CONTAINER
+   ========================= */
+
+.container {
+    max-width: 1150px;
+    margin: 50px auto;
+    padding: 0 25px;
+}
+
+/* =========================
+   CARD SECTION
+   ========================= */
+
+section {
+    background: linear-gradient(
+        145deg,
+        #111B15,
+        #0A120D
+    );
+
+    padding: 35px;
+    margin-bottom: 30px;
+
+    border: 1px solid #204C32;
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.25);
+
+    transition: all 0.35s ease;
+}
+
+/* HOVER EFFECT */
+
+section:hover {
+    border-color: #4ADE80;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 25px rgba(34, 197, 94, 0.12),
+        0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================
+   SECTION TITLE
+   ========================= */
+
+section h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #4ADE80;
+    font-size: 21px;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid #245638;
+
+    text-shadow:
+        0 0 8px rgba(34, 197, 94, 0.2);
+}
+
+/* =========================
+   PARAGRAPH
+   ========================= */
+
+p {
+    color: #B7C9BD;
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+b, strong {
+    color: #86EFAC;
+}
+
+/* =========================
+   LIST
+   ========================= */
+
+ul, ol {
+    padding-left: 28px;
+    margin-top: 15px;
+}
+
+li {
+    color: #C4D8CB;
+    padding: 6px 0;
+    transition: 0.3s;
+}
+
+li::marker {
+    color: #4ADE80;
+}
+
+li:hover {
+    color: #4ADE80;
+    padding-left: 8px;
+}
+
+/* =========================
+   IMAGE
+   ========================= */
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+    border-radius: 14px;
+    border: 2px solid #286344;
+
+    box-shadow:
+        0 0 20px rgba(34, 197, 94, 0.12);
+
+    transition: 0.4s ease;
+}
+
+img:hover {
+    transform: scale(1.03);
+
+    border-color: #4ADE80;
+
+    box-shadow:
+        0 0 30px rgba(34, 197, 94, 0.25);
+}
+
+/* =========================
+   TABLE
+   ========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    margin-top: 20px;
+
+    background: #0A140E;
+    color: #D1FAE5;
+
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* TABLE HEADER */
+
+th {
+    background: #16452B;
+    color: #86EFAC;
+
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+
+    padding: 16px 12px;
+
+    border: 1px solid #286344;
+}
+
+/* TABLE DATA */
+
+td {
+    padding: 14px 12px;
+    text-align: center;
+
+    border: 1px solid #1D3B29;
+
+    color: #C4D8CB;
+}
+
+/* ZEBRA TABLE */
+
+tr:nth-child(even) {
+    background: #122019;
+}
+
+/* TABLE HOVER */
+
+tr:hover td {
+    background: #1B3525;
+    color: #4ADE80;
+}
+
+/* =========================
+   LINKS
+   ========================= */
+
+a {
+    color: #4ADE80;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #FFFFFF;
+    text-shadow: 0 0 12px #22C55E;
+}
+
+/* =========================
+   BUTTON
+   ========================= */
+
+button {
+    background: #123D27;
+    color: #4ADE80;
+
+    border: 1px solid #22C55E;
+    border-radius: 8px;
+
+    padding: 13px 28px;
+
+    font-family: 'Orbitron', sans-serif;
+    font-size: 13px;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #22C55E;
+    color: #061009;
+
+    box-shadow:
+        0 0 20px rgba(34, 197, 94, 0.5);
+
+    transform: translateY(-3px);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    background: #020604;
+    color: #4ADE80;
+
+    text-align: center;
+
+    padding: 35px 20px;
+    margin-top: 60px;
+
+    border-top: 1px solid #22C55E;
+
+    box-shadow:
+        0 -5px 25px rgba(34, 197, 94, 0.06);
+}
+
+footer p {
+    color: #86EFAC;
+    font-size: 13px;
+}
+
+/* =========================
+   TEXT SELECTION
+   ========================= */
+
+::selection {
+    background: #22C55E;
+    color: #020604;
+}
+
+/* =========================
+   SCROLLBAR
+   ========================= */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #070D0A;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #22643F;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4ADE80;
+}
+
+/* =========================
+   RESPONSIVE MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 55px 15px;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .hero h2 {
+        font-size: 17px;
+    }
+
+    .welcome h1 {
+        font-size: 22px;
+    }
+
+    .container {
+        padding: 0 12px;
+        margin: 25px auto;
+    }
+
+    section {
+        padding: 22px;
+        margin-bottom: 20px;
+    }
+
+    section h2 {
+        font-size: 17px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 9px 5px;
+    }
+
+    img {
+        width: 100%;
+        max-width: 280px;
+    }
+}

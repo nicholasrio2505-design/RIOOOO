@@ -1,47 +1,9 @@
-// =====================================================
-// JAVASCRIPT TUGAS
-// HTML DAN CSS ASLI TIDAK DIUBAH
-// =====================================================
-
 document.addEventListener("DOMContentLoaded", function () {
-
-    // =================================================
-    // ARRAY
-    // =================================================
-
-    const hobi = [
-        "Bermain Game",
-        "Mendengarkan Musik",
-        "Belajar Coding",
-        "Menonton Film",
-        "Jalan-jalan bersama teman"
-    ];
-
-    const kegiatan = [
-        "Bangun pagi",
-        "Pergi ke kampus",
-        "Mengikuti perkuliahan",
-        "Mengerjakan tugas",
-        "Bermain atau berkumpul bersama teman"
-    ];
-
-    const pendidikan = [
-        "SD",
-        "SMP",
-        "SMK",
-        "Kuliah"
-    ];
-
-
-    // =================================================
-    // MENCARI CONTAINER HTML ASLI
-    // =================================================
 
     const container = document.querySelector(".container");
 
-
     // =================================================
-    // MEMBUAT FORM MENGGUNAKAN JAVASCRIPT DOM
+    // FORM JAVASCRIPT
     // =================================================
 
     const formJS = document.createElement("section");
@@ -52,361 +14,741 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <h2>7. Form JavaScript</h2>
 
-        <p>
-            <b>Nama Lengkap</b>
-        </p>
+
+        <!-- ================================================= -->
+        <!-- DATA DIRI -->
+        <!-- ================================================= -->
+
+        <h3>Data Diri</h3>
+
+        <p><b>Nama Depan:</b></p>
 
         <input
             type="text"
-            id="namaJS"
-            placeholder="Masukkan nama lengkap"
+            id="namaDepan"
+            placeholder="Masukkan nama depan"
         >
 
-        <p>
-            <b>Jumlah Pilihan</b>
-        </p>
+
+        <p><b>Nama Belakang:</b></p>
 
         <input
-            type="number"
-            id="jumlahJS"
-            min="1"
-            max="10"
-            value="3"
+            type="text"
+            id="namaBelakang"
+            placeholder="Masukkan nama belakang"
         >
 
-        <span
-            id="errorJumlah"
-            style="color:red;">
-        </span>
 
-
-        <p>
-            <b>Email</b>
-        </p>
+        <p><b>Email:</b></p>
 
         <input
             type="email"
-            id="emailJS"
-            placeholder="contoh@gmail.com"
+            id="email"
+            placeholder="Masukkan @gmail.com"
         >
 
 
-        <h3>Pilih Hobi</h3>
+        <!-- ================================================= -->
+        <!-- HOBI -->
+        <!-- ================================================= -->
 
-        <div id="checkboxJS"></div>
+        <hr>
 
+        <h3>Hobi</h3>
 
-        <h3>Pilih Kegiatan</h3>
+        <p><b>Jumlah List Hobi:</b></p>
 
-        <select id="dropdownJS">
+        <input
+            type="number"
+            id="jumlahHobi"
+            min="1"
+            placeholder="Contoh: 10"
+        >
 
-            <option value="">
-                -- Pilih Kegiatan --
-            </option>
+        <br><br>
 
-        </select>
-
-
-        <h3>Pilih Pendidikan</h3>
-
-        <div id="radioJS"></div>
-
-
-        <br>
-
-        <button
-            type="button"
-            id="tombolJS">
-
-            Tampilkan Data
-
+        <button type="button" id="submitHobi">
+            Submit Hobi
         </button>
 
 
         <div
-            id="outputJS"
+            id="listHobi"
+            style="display:none;"
+        >
+
+            <h3>Masukkan List Hobi</h3>
+
+            <div id="inputHobi"></div>
+
+            <br>
+
+            <button type="button" id="buatCheckboxHobi">
+                Pilih Hobi
+            </button>
+
+        </div>
+
+
+        <div
+            id="checkboxHobi"
+            style="display:none;"
+        >
+
+            <h3>Hobi yang Kamu Suka</h3>
+
+            <div id="daftarHobi"></div>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- KEGIATAN -->
+        <!-- ================================================= -->
+
+        <hr>
+
+        <h3>Kegiatan</h3>
+
+        <p><b>Jumlah List Kegiatan:</b></p>
+
+        <input
+            type="number"
+            id="jumlahKegiatan"
+            min="1"
+            placeholder="Contoh: 5"
+        >
+
+        <br><br>
+
+        <button type="button" id="submitKegiatan">
+            Submit Kegiatan
+        </button>
+
+
+        <div
+            id="listKegiatan"
+            style="display:none;"
+        >
+
+            <h3>Masukkan List Kegiatan</h3>
+
+            <div id="inputKegiatan"></div>
+
+            <br>
+
+            <button type="button" id="buatCheckboxKegiatan">
+                Pilih Kegiatan
+            </button>
+
+        </div>
+
+
+        <div
+            id="checkboxKegiatan"
+            style="display:none;"
+        >
+
+            <h3>Kegiatan yang Kamu Suka</h3>
+
+            <div id="daftarKegiatan"></div>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- PENDIDIKAN -->
+        <!-- ================================================= -->
+
+        <hr>
+
+        <h3>Pendidikan</h3>
+
+        <p><b>Jumlah List Pendidikan:</b></p>
+
+        <input
+            type="number"
+            id="jumlahPendidikan"
+            min="1"
+            placeholder="Contoh: 4"
+        >
+
+        <br><br>
+
+        <button type="button" id="submitPendidikan">
+            Submit Pendidikan
+        </button>
+
+
+        <div
+            id="listPendidikan"
+            style="display:none;"
+        >
+
+            <h3>Masukkan List Pendidikan</h3>
+
+            <div id="inputPendidikan"></div>
+
+            <br>
+
+            <button type="button" id="buatCheckboxPendidikan">
+                Pilih Pendidikan
+            </button>
+
+        </div>
+
+
+        <div
+            id="checkboxPendidikan"
+            style="display:none;"
+        >
+
+            <h3>Pendidikan yang Kamu Pilih</h3>
+
+            <div id="daftarPendidikan"></div>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- TAMPILKAN DATA -->
+        <!-- ================================================= -->
+
+        <hr>
+
+        <button type="button" id="tampilkanData">
+            Tampilkan Data
+        </button>
+
+
+        <!-- ================================================= -->
+        <!-- HASIL -->
+        <!-- ================================================= -->
+
+        <div
+            id="hasilBox"
             style="
                 display:none;
                 margin-top:20px;
                 padding:15px;
                 border:2px solid black;
-            ">
+            "
+        >
 
-            <h3>Output JavaScript DOM</h3>
+            <h3>Hasil Data</h3>
 
-            <div id="hasilJS"></div>
+            <div id="hasil"></div>
 
         </div>
 
     `;
 
-
-    // Memasukkan form ke HTML asli
     container.appendChild(formJS);
 
 
     // =================================================
-    // LOOP CHECKBOX
-    // =================================================
-
-    const checkboxJS =
-        document.getElementById("checkboxJS");
-
-
-    hobi.forEach(function (item) {
-
-        checkboxJS.innerHTML += `
-
-            <label>
-
-                <input
-                    type="checkbox"
-                    name="hobiJS"
-                    value="${item}"
-                >
-
-                ${item}
-
-            </label>
-
-            <br>
-
-        `;
-
-    });
-
-
-    // =================================================
-    // LOOP DROPDOWN
-    // =================================================
-
-    const dropdownJS =
-        document.getElementById("dropdownJS");
-
-
-    kegiatan.forEach(function (item) {
-
-        dropdownJS.innerHTML += `
-
-            <option value="${item}">
-                ${item}
-            </option>
-
-        `;
-
-    });
-
-
-    // =================================================
-    // LOOP RADIO BUTTON
-    // =================================================
-
-    const radioJS =
-        document.getElementById("radioJS");
-
-
-    pendidikan.forEach(function (item) {
-
-        radioJS.innerHTML += `
-
-            <label>
-
-                <input
-                    type="radio"
-                    name="pendidikanJS"
-                    value="${item}"
-                >
-
-                ${item}
-
-            </label>
-
-            <br>
-
-        `;
-
-    });
-
-
-    // =================================================
-    // NUMBER SPINNER + ERROR HANDLING
-    // =================================================
-
-    const jumlahJS =
-        document.getElementById("jumlahJS");
-
-    const errorJumlah =
-        document.getElementById("errorJumlah");
-
-
-    jumlahJS.addEventListener("input", function () {
-
-        const jumlah =
-            Number(jumlahJS.value);
-
-
-        if (
-            jumlah < 1 ||
-            jumlah > 10 ||
-            isNaN(jumlah)
-        ) {
-
-            errorJumlah.textContent =
-                " Jumlah harus 1 sampai 10";
-
-        } else {
-
-            errorJumlah.textContent = "";
-
-        }
-
-    });
-
-
-    // =================================================
-    // TOMBOL
+    // HOBI - MEMBUAT INPUT
     // =================================================
 
     document
-        .getElementById("tombolJS")
+        .getElementById("submitHobi")
         .addEventListener("click", function () {
 
-
-        // =============================================
-        // INPUT TEXT
-        // =============================================
-
-        const nama =
-            document
-                .getElementById("namaJS")
-                .value
-                .trim();
-
-
-        // =============================================
-        // INPUT NUMBER
-        // =============================================
-
-        const jumlah =
-            Number(
-                document
-                    .getElementById("jumlahJS")
-                    .value
+            const jumlah = parseInt(
+                document.getElementById("jumlahHobi").value
             );
 
+            const inputHobi =
+                document.getElementById("inputHobi");
 
-        if (
-            jumlah < 1 ||
-            jumlah > 10 ||
-            isNaN(jumlah)
-        ) {
+            inputHobi.innerHTML = "";
 
-            alert(
-                "Jumlah pilihan harus antara 1 sampai 10!"
-            );
+            if (isNaN(jumlah) || jumlah < 1) {
 
-            jumlahJS.focus();
+                alert("Masukkan jumlah hobi!");
 
-            return;
-
-        }
+                return;
+            }
 
 
-        // =============================================
-        // INPUT EMAIL
-        // PATTERN MATCHING
-        // =============================================
+            for (let i = 1; i <= jumlah; i++) {
 
-        const email =
-            document
-                .getElementById("emailJS")
-                .value
-                .trim();
+                inputHobi.innerHTML += `
 
+                    <p>
 
-        const polaEmail =
-            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        <b>Hobi ${i}:</b>
 
+                        <br>
 
-        if (!polaEmail.test(email)) {
+                        <input
+                            type="text"
+                            class="namaHobi"
+                            placeholder="Masukkan hobi ${i}"
+                        >
 
-            alert(
-                "Format email tidak valid!\n\n" +
-                "Silakan masukkan email yang benar.\n" +
-                "Contoh: nama@gmail.com"
-            );
+                    </p>
+
+                `;
+
+            }
+
 
             document
-                .getElementById("emailJS")
-                .focus();
-
-            return;
-
-        }
-
-
-        // =============================================
-        // CHECKBOX
-        // ARRAY MENYIMPAN HASIL PILIHAN
-        // =============================================
-
-        const checkboxTerpilih =
-            document.querySelectorAll(
-                'input[name="hobiJS"]:checked'
-            );
-
-
-        let hobiDipilih = [];
-
-
-        checkboxTerpilih.forEach(function (item) {
-
-            hobiDipilih.push(item.value);
+                .getElementById("listHobi")
+                .style.display = "block";
 
         });
 
 
-        // =============================================
-        // DROPDOWN
-        // =============================================
+    // =================================================
+    // HOBI - MEMBUAT CHECKBOX
+    // =================================================
 
-        const kegiatanDipilih =
-            dropdownJS.value;
+    document
+        .getElementById("buatCheckboxHobi")
+        .addEventListener("click", function () {
+
+            const semuaHobi =
+                document.querySelectorAll(".namaHobi");
+
+            const daftarHobi =
+                document.getElementById("daftarHobi");
+
+            daftarHobi.innerHTML = "";
 
 
-        // =============================================
-        // RADIO BUTTON
-        // =============================================
+            for (let i = 0; i < semuaHobi.length; i++) {
 
-        const radioTerpilih =
-            document.querySelector(
-                'input[name="pendidikanJS"]:checked'
+                if (semuaHobi[i].value.trim() === "") {
+
+                    alert("Hobi " + (i + 1) + " belum diisi!");
+
+                    return;
+                }
+
+            }
+
+
+            semuaHobi.forEach(function (hobi) {
+
+                const nama =
+                    hobi.value.trim();
+
+                daftarHobi.innerHTML += `
+
+                    <p>
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                name="hobi"
+                                value="${nama}"
+                                class="pilihanHobi"
+                            >
+
+                            ${nama}
+
+                        </label>
+
+                    </p>
+
+                `;
+
+            });
+
+
+            document
+                .getElementById("checkboxHobi")
+                .style.display = "block";
+
+        });
+
+
+    // =================================================
+    // KEGIATAN - MEMBUAT INPUT
+    // =================================================
+
+    document
+        .getElementById("submitKegiatan")
+        .addEventListener("click", function () {
+
+            const jumlah = parseInt(
+                document.getElementById("jumlahKegiatan").value
             );
 
+            const inputKegiatan =
+                document.getElementById("inputKegiatan");
 
-        let pendidikanDipilih =
-            "Belum memilih";
+            inputKegiatan.innerHTML = "";
+
+            if (isNaN(jumlah) || jumlah < 1) {
+
+                alert("Masukkan jumlah kegiatan!");
+
+                return;
+            }
 
 
-        if (radioTerpilih) {
+            for (let i = 1; i <= jumlah; i++) {
 
-            pendidikanDipilih =
-                radioTerpilih.value;
+                inputKegiatan.innerHTML += `
 
-        }
+                    <p>
+
+                        <b>Kegiatan ${i}:</b>
+
+                        <br>
+
+                        <input
+                            type="text"
+                            class="namaKegiatan"
+                            placeholder="Masukkan kegiatan ${i}"
+                        >
+
+                    </p>
+
+                `;
+
+            }
 
 
-        // =============================================
-        // OUTPUT JAVASCRIPT DOM
-        // =============================================
+            document
+                .getElementById("listKegiatan")
+                .style.display = "block";
 
-        document
-            .getElementById("hasilJS")
-            .innerHTML = `
+        });
+
+
+    // =================================================
+    // KEGIATAN - MEMBUAT CHECKBOX
+    // =================================================
+
+    document
+        .getElementById("buatCheckboxKegiatan")
+        .addEventListener("click", function () {
+
+            const semuaKegiatan =
+                document.querySelectorAll(".namaKegiatan");
+
+            const daftarKegiatan =
+                document.getElementById("daftarKegiatan");
+
+            daftarKegiatan.innerHTML = "";
+
+
+            for (let i = 0; i < semuaKegiatan.length; i++) {
+
+                if (semuaKegiatan[i].value.trim() === "") {
+
+                    alert(
+                        "Kegiatan " + (i + 1) + " belum diisi!"
+                    );
+
+                    return;
+                }
+
+            }
+
+
+            semuaKegiatan.forEach(function (kegiatan) {
+
+                const nama =
+                    kegiatan.value.trim();
+
+                daftarKegiatan.innerHTML += `
+
+                    <p>
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                name="kegiatan"
+                                value="${nama}"
+                                class="pilihanKegiatan"
+                            >
+
+                            ${nama}
+
+                        </label>
+
+                    </p>
+
+                `;
+
+            });
+
+
+            document
+                .getElementById("checkboxKegiatan")
+                .style.display = "block";
+
+        });
+
+
+    // =================================================
+    // PENDIDIKAN - MEMBUAT INPUT
+    // =================================================
+
+    document
+        .getElementById("submitPendidikan")
+        .addEventListener("click", function () {
+
+            const jumlah = parseInt(
+                document.getElementById("jumlahPendidikan").value
+            );
+
+            const inputPendidikan =
+                document.getElementById("inputPendidikan");
+
+            inputPendidikan.innerHTML = "";
+
+            if (isNaN(jumlah) || jumlah < 1) {
+
+                alert("Masukkan jumlah pendidikan!");
+
+                return;
+            }
+
+
+            for (let i = 1; i <= jumlah; i++) {
+
+                inputPendidikan.innerHTML += `
+
+                    <p>
+
+                        <b>Pendidikan ${i}:</b>
+
+                        <br>
+
+                        <input
+                            type="text"
+                            class="namaPendidikan"
+                            placeholder="Masukkan pendidikan ${i}"
+                        >
+
+                    </p>
+
+                `;
+
+            }
+
+
+            document
+                .getElementById("listPendidikan")
+                .style.display = "block";
+
+        });
+
+
+    // =================================================
+    // PENDIDIKAN - MEMBUAT CHECKBOX
+    // =================================================
+
+    document
+        .getElementById("buatCheckboxPendidikan")
+        .addEventListener("click", function () {
+
+            const semuaPendidikan =
+                document.querySelectorAll(".namaPendidikan");
+
+            const daftarPendidikan =
+                document.getElementById("daftarPendidikan");
+
+            daftarPendidikan.innerHTML = "";
+
+
+            for (let i = 0; i < semuaPendidikan.length; i++) {
+
+                if (semuaPendidikan[i].value.trim() === "") {
+
+                    alert(
+                        "Pendidikan " + (i + 1) + " belum diisi!"
+                    );
+
+                    return;
+                }
+
+            }
+
+
+            semuaPendidikan.forEach(function (pendidikan) {
+
+                const nama =
+                    pendidikan.value.trim();
+
+                daftarPendidikan.innerHTML += `
+
+                    <p>
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                name="pendidikan"
+                                value="${nama}"
+                                class="pilihanPendidikan"
+                            >
+
+                            ${nama}
+
+                        </label>
+
+                    </p>
+
+                `;
+
+            });
+
+
+            document
+                .getElementById("checkboxPendidikan")
+                .style.display = "block";
+
+        });
+
+
+    // =================================================
+    // TAMPILKAN DATA
+    // =================================================
+
+    document
+        .getElementById("tampilkanData")
+        .addEventListener("click", function () {
+
+
+            // =========================================
+            // DATA DIRI
+            // =========================================
+
+            const namaDepan =
+                document
+                    .getElementById("namaDepan")
+                    .value
+                    .trim();
+
+            const namaBelakang =
+                document
+                    .getElementById("namaBelakang")
+                    .value
+                    .trim();
+
+            const email =
+                document
+                    .getElementById("email")
+                    .value
+                    .trim();
+                    // VALIDASI NAMA
+
+const polaNama = /^[A-Za-z\s]+$/;
+
+if (namaDepan === "") {
+    alert("Nama depan wajib diisi!");
+    document.getElementById("namaDepan").focus();
+    return;
+}
+
+if (!polaNama.test(namaDepan)) {
+    alert("Nama depan hanya boleh menggunakan huruf!");
+    document.getElementById("namaDepan").focus();
+    return;
+}
+
+if (namaBelakang === "") {
+    alert("Nama belakang wajib diisi!");
+    document.getElementById("namaBelakang").focus();
+    return;
+}
+
+if (!polaNama.test(namaBelakang)) {
+    alert("Nama belakang hanya boleh menggunakan huruf!");
+    document.getElementById("namaBelakang").focus();
+    return;
+}
+
+
+// VALIDASI EMAIL
+
+if (email === "") {
+    alert("Email wajib diisi!");
+    document.getElementById("email").focus();
+    return;
+}
+
+const polaEmail = /^[A-Za-z0-9._%+-]+@gmail\.com$/;
+
+if (!polaEmail.test(email)) {
+    alert("Email harus menggunakan @gmail.com!");
+    document.getElementById("email").focus();
+    return;
+}
+
+
+            // =========================================
+            // MENGAMBIL HOBI
+            // =========================================
+
+            const hobiDipilih =
+                document.querySelectorAll(
+                    ".pilihanHobi:checked"
+                );
+
+            let hobi = [];
+
+            hobiDipilih.forEach(function (item) {
+
+                hobi.push(item.value);
+
+            });
+
+
+            // =========================================
+            // MENGAMBIL KEGIATAN
+            // =========================================
+
+            const kegiatanDipilih =
+                document.querySelectorAll(
+                    ".pilihanKegiatan:checked"
+                );
+
+            let kegiatan = [];
+
+            kegiatanDipilih.forEach(function (item) {
+
+                kegiatan.push(item.value);
+
+            });
+
+
+            // =========================================
+            // MENGAMBIL PENDIDIKAN
+            // =========================================
+
+            const pendidikanDipilih =
+                document.querySelectorAll(
+                    ".pilihanPendidikan:checked"
+                );
+
+            let pendidikan = [];
+
+            pendidikanDipilih.forEach(function (item) {
+
+                pendidikan.push(item.value);
+
+            });
+
+
+            // =========================================
+            // OUTPUT
+            // =========================================
+
+            document.getElementById("hasil").innerHTML = `
 
                 <p>
                     <b>Nama:</b>
-                    ${nama || "Belum diisi"}
+                    ${namaDepan} ${namaBelakang}
                 </p>
 
                 <p>
@@ -415,15 +757,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 </p>
 
                 <p>
-                    <b>Jumlah:</b>
-                    ${jumlah}
-                </p>
-
-                <p>
                     <b>Hobi:</b>
                     ${
-                        hobiDipilih.length > 0
-                        ? hobiDipilih.join(", ")
+                        hobi.length > 0
+                        ? hobi.join(", ")
                         : "Belum memilih"
                     }
                 </p>
@@ -431,25 +768,28 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p>
                     <b>Kegiatan:</b>
                     ${
-                        kegiatanDipilih
-                        || "Belum memilih"
+                        kegiatan.length > 0
+                        ? kegiatan.join(", ")
+                        : "Belum memilih"
                     }
                 </p>
 
                 <p>
                     <b>Pendidikan:</b>
-                    ${pendidikanDipilih}
+                    ${
+                        pendidikan.length > 0
+                        ? pendidikan.join(", ")
+                        : "Belum memilih"
+                    }
                 </p>
 
             `;
 
 
-        // Menampilkan output
+            document
+                .getElementById("hasilBox")
+                .style.display = "block";
 
-        document
-            .getElementById("outputJS")
-            .style.display = "block";
-
-    });
+        });
 
 });
